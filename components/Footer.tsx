@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
              <NeoButton variant="secondary" className="border-2 shadow-neo" onClick={handleScrollToRoast}>Try Roasted Free</NeoButton>
              <Link to="/contact">
-               <NeoButton variant="outline" className="bg-transparent border-2 shadow-none hover:bg-white/20">Book A Discovery Call</NeoButton>
+               <NeoButton variant="outline" className="bg-transparent border-2 shadow-none hover:bg-black/10">Book A Discovery Call</NeoButton>
              </Link>
           </div>
         </div>
