@@ -78,7 +78,7 @@ export const OfferComparison: React.FC = () => {
                 <div className="font-black text-white text-xs tracking-widest uppercase mb-3 bg-neo-blue px-2 py-1 rounded-sm border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">Free Trial</div>
                 <h3 className="text-3xl md:text-4xl font-black mb-4 text-black leading-none">Try Roasted Free</h3>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
-                  Get one free redesigned section (with a conversion report) from any URL on your website.
+                  Uses our custom AI to generate immediate feedback on any URL on your website — a limited preview of our full-service conversion reports.
                 </p>
                 <div className="mt-auto w-full">
                   <NeoButton 
@@ -156,7 +156,7 @@ export const OfferComparison: React.FC = () => {
                         fullWidth
                         className="bg-white text-black border-neo-green shadow-[4px_4px_0px_0px_#00FF99] hover:shadow-[2px_2px_0px_0px_#00FF99] hover:bg-green-50"
                       >
-                        Explore Conversion Reports
+                        Get A Free Conversion Report
                       </NeoButton>
                    </Link>
                    

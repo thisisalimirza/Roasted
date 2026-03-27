@@ -43,17 +43,33 @@ export const Navbar: React.FC = () => {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <Link to="/services" className={`${navLinkClass} flex items-center gap-1`}>
+              <Link to="/services" className={`${navLinkClass} flex items-center gap-1 ${location.pathname.startsWith('/services') ? 'text-neo-blue' : ''}`}>
                 Services <ChevronDown size={14} />
               </Link>
               
               {isServicesOpen && (
                 <div className="absolute top-20 left-1/2 -translate-x-1/2 w-64 bg-white border-2 border-black shadow-neo-lg py-2 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <Link to="/services/landing-pages" className="block px-4 py-3 hover:bg-gray-50 font-bold text-sm border-b border-gray-100">Landing Pages</Link>
-                  <Link to="/services/conversion-reports" className="block px-4 py-3 hover:bg-gray-50 font-bold text-sm border-b border-gray-100">Conversion Reports</Link>
-                  <Link to="/services/new-site-design" className="block px-4 py-3 hover:bg-gray-50 font-bold text-sm border-b border-gray-100">New Site Design</Link>
-                  <Link to="/services/shopify-development" className="block px-4 py-3 hover:bg-gray-50 font-bold text-sm border-b border-gray-100">Shopify Dev</Link>
-                  <Link to="/services/mobile-apps" className="block px-4 py-3 hover:bg-gray-50 font-bold text-sm text-neo-purple">Mobile Apps</Link>
+                  {[
+                    { to: '/services/landing-pages', label: 'Landing Pages' },
+                    { to: '/services/conversion-reports', label: 'Conversion Reports' },
+                    { to: '/services/new-site-design', label: 'New Site Design' },
+                    { to: '/services/shopify-development', label: 'Shopify Dev' },
+                    { to: '/services/mobile-apps', label: 'Mobile Apps' },
+                  ].map((item, i, arr) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      className={`block px-4 py-3 font-bold text-sm ${
+                        i < arr.length - 1 ? 'border-b border-gray-100' : ''
+                      } ${
+                        location.pathname === item.to
+                          ? 'bg-neo-blue/10 text-neo-blue border-l-4 border-l-neo-blue'
+                          : 'hover:bg-gray-50'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
@@ -85,11 +101,24 @@ export const Navbar: React.FC = () => {
           <div className="px-4 pt-8 pb-3 space-y-6 flex flex-col items-center">
             <div className="w-full border-b border-gray-200 pb-4 mb-4">
               <div className="font-black text-gray-400 text-xs uppercase mb-4 text-center">Services</div>
-              <Link to="/services/landing-pages" className="block text-center text-xl font-bold mb-3 hover:text-neo-blue" onClick={() => setIsOpen(false)}>Landing Pages</Link>
-              <Link to="/services/conversion-reports" className="block text-center text-xl font-bold mb-3 hover:text-neo-blue" onClick={() => setIsOpen(false)}>Conversion Reports</Link>
-              <Link to="/services/new-site-design" className="block text-center text-xl font-bold mb-3 hover:text-neo-blue" onClick={() => setIsOpen(false)}>New Site Design</Link>
-              <Link to="/services/shopify-development" className="block text-center text-xl font-bold mb-3 hover:text-neo-blue" onClick={() => setIsOpen(false)}>Shopify Dev</Link>
-              <Link to="/services/mobile-apps" className="block text-center text-xl font-bold hover:text-neo-purple" onClick={() => setIsOpen(false)}>Mobile Apps</Link>
+              {[
+                { to: '/services/landing-pages', label: 'Landing Pages' },
+                { to: '/services/conversion-reports', label: 'Conversion Reports' },
+                { to: '/services/new-site-design', label: 'New Site Design' },
+                { to: '/services/shopify-development', label: 'Shopify Dev' },
+                { to: '/services/mobile-apps', label: 'Mobile Apps' },
+              ].map((item, i, arr) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={`block text-center text-xl font-bold ${i < arr.length - 1 ? 'mb-3' : ''} ${
+                    location.pathname === item.to ? 'text-neo-blue' : 'hover:text-neo-blue'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
             
             <Link to="/case-studies" className="font-black text-3xl hover:text-neo-blue" onClick={() => setIsOpen(false)}>CASE STUDIES</Link>
