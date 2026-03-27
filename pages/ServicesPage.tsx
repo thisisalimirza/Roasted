@@ -140,7 +140,7 @@ export const ServicesPage: React.FC = () => {
         <ServiceSection 
           id="reports"
           title="Conversion Reports"
-          subtitle="A comprehensive teardown of your entire user journey (Every URL). We don't just point out problems; we design the solutions. You get a prioritized list of friction points and a multi-page Figma file covering your entire site."
+          subtitle="A comprehensive teardown of your entire user journey — every page, every touchpoint, every entry point. We don't just point out problems; we design the solutions. You get a prioritized list of friction points and a multi-page Figma file covering your entire site. Want to start small? Try our Landing Page Report for just $250 — upgrade anytime and we'll deduct it from the full price."
           price="$2,250"
           color="yellow"
           icon={FileText}

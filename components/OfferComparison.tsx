@@ -36,7 +36,7 @@ export const OfferComparison: React.FC = () => {
              
              {/* Value Badge */}
              <div className="absolute top-4 right-4 bg-neo-blue text-white text-[10px] font-black uppercase px-2 py-1 border border-black shadow-sm z-20 rotate-3">
-               Valued at $500
+               $250 One-Time
              </div>
 
              <div className="h-64 p-8 bg-blue-50/50 flex items-center justify-center border-b-2 border-neo-blue/20 relative overflow-hidden">
@@ -75,10 +75,10 @@ export const OfferComparison: React.FC = () => {
              </div>
              
              <div className="p-8 flex-grow flex flex-col items-start bg-[#FFF8EE]">
-                <div className="font-black text-white text-xs tracking-widest uppercase mb-3 bg-neo-blue px-2 py-1 rounded-sm border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">Free Trial</div>
-                <h3 className="text-3xl md:text-4xl font-black mb-4 text-black leading-none">Try Roasted Free</h3>
+                <div className="font-black text-white text-xs tracking-widest uppercase mb-3 bg-neo-blue px-2 py-1 rounded-sm border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">Landing Page Report</div>
+                <h3 className="text-3xl md:text-4xl font-black mb-4 text-black leading-none">Start With Your Landing Page</h3>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
-                  Uses our custom AI to generate immediate feedback on any URL on your website — a limited preview of our full-service conversion reports.
+                  Your landing page is your biggest lever. We apply the same conversion process we use in our full reports — but focused on just your main page. Ready to go deeper? Upgrade to a full site report anytime and we'll deduct the $250.
                 </p>
                 <div className="mt-auto w-full">
                   <NeoButton 
@@ -144,10 +144,10 @@ export const OfferComparison: React.FC = () => {
              </div>
 
              <div className="p-8 flex-grow flex flex-col items-start bg-[#F0FFF4] relative">
-                <div className="font-black text-black text-xs tracking-widest uppercase mb-3 bg-neo-green px-2 py-1 rounded-sm border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">Starting at $2,250</div>
-                <h3 className="text-3xl md:text-4xl font-black mb-4 text-black leading-none">Roasted Conversion Reports</h3>
+                <div className="font-black text-black text-xs tracking-widest uppercase mb-3 bg-neo-green px-2 py-1 rounded-sm border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">$2,250 One-Time</div>
+                <h3 className="text-3xl md:text-4xl font-black mb-4 text-black leading-none">Full Site Conversion Report</h3>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium max-w-2xl">
-                  Our expert conversion team analyzes your website through your customers' eyes, identifying the top 'conversion-critical' friction points with ready-to-implement designs.
+                  The complete teardown. We analyze every page and touchpoint across your entire website — Home, Product, Cart, Checkout, and every entry point — identifying the top conversion-critical friction points with ready-to-implement redesigns.
                 </p>
                 
                 <div className="mt-auto w-full flex flex-col md:flex-row gap-6 items-center">

@@ -61,9 +61,10 @@ export const Services: React.FC = () => {
                  <Link to="/services/conversion-reports" className="block group">
                     <div className="bg-neo-yellow/10 border-2 border-black p-5 hover:bg-neo-yellow transition-colors relative">
                       <FileText size={24} className="mb-3 text-black" />
-                      <h4 className="font-black text-xl mb-1">Conversion Reports</h4>
-                      <p className="text-xs font-mono text-gray-600 mb-2">Full Site Audit & Figma Redesign.</p>
+                      <h4 className="font-black text-xl mb-1">Landing Page Report</h4>
+                      <p className="text-xs font-mono text-gray-600 mb-2">One-page deep-dive. Same process as our full report.</p>
                       <div className="inline-block bg-black text-white text-[10px] font-bold px-2 py-0.5">$250 One-Time</div>
+                      <p className="text-[10px] text-gray-500 mt-2">Upgrade to Full Site Report ($2,250) anytime — we deduct the $250.</p>
                     </div>
                  </Link>
                </div>
