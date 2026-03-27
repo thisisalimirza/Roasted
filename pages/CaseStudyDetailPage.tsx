@@ -310,18 +310,11 @@ export const CaseStudyDetailPage: React.FC = () => {
           <p className="text-xl font-mono mb-8 max-w-2xl mx-auto text-white/80">
             Stop leaving money on the table. Let's find the leaks in your funnel.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact">
-              <NeoButton variant="primary" className="text-lg px-10 py-4 shadow-[6px_6px_0px_0px_#000]">
-                Start Your Transformation
-              </NeoButton>
-            </Link>
-            <Link to="/case-studies">
-              <NeoButton variant="outline" className="text-lg px-10 py-4 bg-transparent text-white border-white hover:bg-white hover:text-neo-blue">
-                More Case Studies
-              </NeoButton>
-            </Link>
-          </div>
+          <Link to="/contact">
+            <NeoButton variant="primary" className="text-lg px-10 py-4 shadow-[6px_6px_0px_0px_#000]">
+              Start Your Transformation
+            </NeoButton>
+          </Link>
         </div>
       </div>
     </div>
