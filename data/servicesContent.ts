@@ -31,7 +31,7 @@ export const servicesData = {
   "conversion-reports": {
     title: "Conversion Reports",
     headline: "The Blueprint To Fix Your Funnel.",
-    description: "A comprehensive, no-mercy audit of your entire website. We analyze every URL (Home, Collections, Product, Cart, Checkout) to find exactly where you're bleeding revenue. You get a massive multi-page Figma file with high-fidelity redesigns for every friction point found.",
+    description: "A comprehensive, no-mercy audit of your entire website. We analyze every page and touchpoint (Home, Collections, Product, Cart, Checkout) to find exactly where you're bleeding revenue. You get a massive multi-page Figma file with high-fidelity redesigns for every friction point found. Want to start small? Try our Landing Page Report for just $250 — upgrade anytime and we'll deduct it from the full price.",
     price: "$2,250 One-Time",
     color: "yellow",
     icon: FileText,

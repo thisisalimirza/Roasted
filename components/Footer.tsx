@@ -24,12 +24,12 @@ export const Footer: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Get Started With Roasted Free</h2>
           <p className="font-mono text-lg mb-8 max-w-xl mx-auto">
-            Get one free redesigned section (with a conversion report) from any URL on your website. 100% Free. No Credit Card Required.
+            Start with a Landing Page Report for just $250 — the same conversion process we use for full site audits, focused on your main page. Upgrade anytime.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
              <NeoButton variant="secondary" className="border-2 shadow-neo" onClick={handleScrollToRoast}>Try Roasted Free</NeoButton>
              <Link to="/contact">
-               <NeoButton variant="outline" className="bg-transparent border-2 shadow-none hover:bg-white/20">Book A Discovery Call</NeoButton>
+               <NeoButton variant="outline" className="bg-transparent border-2 shadow-none hover:bg-black/10">Book A Discovery Call</NeoButton>
              </Link>
           </div>
         </div>

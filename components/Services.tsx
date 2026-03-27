@@ -48,7 +48,7 @@ export const Services: React.FC = () => {
             </div>
             <div className="bg-white border-2 border-black p-8 flex-grow shadow-neo flex flex-col">
                <div className="mb-6">
-                 <h3 className="text-3xl font-black mb-4 uppercase">Find The Leaks</h3>
+                 <h3 className="text-3xl font-black mb-4 uppercase">Find Your Leaks</h3>
                  <p className="text-gray-600 font-medium text-sm leading-relaxed">
                    You can't fix what you can't see. We start by tearing apart your entire site (every URL) to find exactly where you're losing money.
                  </p>
@@ -61,9 +61,18 @@ export const Services: React.FC = () => {
                  <Link to="/services/conversion-reports" className="block group">
                     <div className="bg-neo-yellow/10 border-2 border-black p-5 hover:bg-neo-yellow transition-colors relative">
                       <FileText size={24} className="mb-3 text-black" />
-                      <h4 className="font-black text-xl mb-1">Conversion Reports</h4>
-                      <p className="text-xs font-mono text-gray-600 mb-2">Full Site Audit & Figma Redesign.</p>
+                      <h4 className="font-black text-xl mb-1">Full Conversion Report</h4>
+                      <p className="text-xs font-mono text-gray-600 mb-2">Every page & touchpoint audited with redesigns.</p>
                       <div className="inline-block bg-black text-white text-[10px] font-bold px-2 py-0.5">$2,250 One-Time</div>
+                    </div>
+                 </Link>
+
+                 <Link to="/services/conversion-reports" className="block group">
+                    <div className="bg-white border-2 border-black p-5 hover:bg-neo-yellow/10 transition-colors relative">
+                      <h4 className="font-black text-xl mb-1">Just The Landing Page</h4>
+                      <p className="text-xs font-mono text-gray-600 mb-2">Same process, focused on your main page.</p>
+                      <div className="inline-block bg-black text-white text-[10px] font-bold px-2 py-0.5">$250 One-Time</div>
+                      <p className="text-[10px] text-gray-500 mt-2">Upgrade anytime — we deduct the $250.</p>
                     </div>
                  </Link>
                </div>
@@ -77,7 +86,7 @@ export const Services: React.FC = () => {
             </div>
             <div className="bg-white border-2 border-black p-8 flex-grow shadow-neo flex flex-col">
                <div className="mb-6">
-                 <h3 className="text-3xl font-black mb-4 uppercase">Fix The Funnel</h3>
+                 <h3 className="text-3xl font-black mb-4 uppercase">Fix Your Funnel</h3>
                  <p className="text-gray-600 font-medium text-sm leading-relaxed">
                    Once we know the problems, we design the solutions. High-converting, brand-aligned interfaces that print money.
                  </p>
@@ -87,17 +96,11 @@ export const Services: React.FC = () => {
                  <div className="border-t-2 border-dashed border-gray-200 my-4"></div>
                  <h4 className="font-bold text-xs uppercase text-gray-400 mb-2">Services:</h4>
                  
-                 <MiniServiceCard 
-                   title="Landing Pages" 
-                   price="From $2.5k" 
+                 <MiniServiceCard
+                   title="Funnel Buildout"
+                   price="From $5k"
                    link="/services/landing-pages"
                    color="pink"
-                 />
-                 <MiniServiceCard 
-                   title="New Site Design" 
-                   price="From $8k" 
-                   link="/services/new-site-design"
-                   color="blue"
                  />
                </div>
             </div>
@@ -110,9 +113,9 @@ export const Services: React.FC = () => {
             </div>
             <div className="bg-white border-2 border-black p-8 flex-grow shadow-neo flex flex-col">
                <div className="mb-6">
-                 <h3 className="text-3xl font-black mb-4 uppercase">Build & Retain</h3>
+                 <h3 className="text-3xl font-black mb-4 uppercase">Build & Retain Your Growth</h3>
                  <p className="text-gray-600 font-medium text-sm leading-relaxed">
-                   Implementation and retention. We build the tech stack that supports your growth and keeps customers coming back.
+                   We manage it for you with an ongoing retainer, or we train your team to manage it themselves with a hands-on handoff workshop.
                  </p>
                </div>
 
@@ -120,15 +123,15 @@ export const Services: React.FC = () => {
                  <div className="border-t-2 border-dashed border-gray-200 my-4"></div>
                  <h4 className="font-bold text-xs uppercase text-gray-400 mb-2">Services:</h4>
                  
-                 <MiniServiceCard 
-                   title="Shopify Dev" 
-                   price="From $5k" 
+                 <MiniServiceCard
+                   title="Retainer"
+                   price="$1,200/mo + ad spend"
                    link="/services/shopify-development"
                    color="green"
                  />
-                 <MiniServiceCard 
-                   title="Mobile Apps" 
-                   price="From $10k" 
+                 <MiniServiceCard
+                   title="Handoff Workshop"
+                   price="One training session. No additional cost."
                    link="/services/mobile-apps"
                    color="purple"
                  />
