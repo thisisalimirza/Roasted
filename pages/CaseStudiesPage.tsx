@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 const cases = [
   {
     brand: "The Oodie",
+    slug: "the-oodie",
     headline: "Generated millions in new monthly revenue",
     stats: [
       { label: "Increased CVR", value: "3 to 5%" },
@@ -18,6 +19,7 @@ const cases = [
   },
   {
     brand: "Fresh Chile Co",
+    slug: "fresh-chile-co",
     headline: "Saw a 190% increase in sales after working with Roasted",
     stats: [
       { label: "Conversion Lift", value: "78%" },
@@ -29,6 +31,7 @@ const cases = [
   },
   {
     brand: "Crossnet",
+    slug: "crossnet",
     headline: "Saw a 20% increase in Add to Cart post-audit",
     stats: [
       { label: "Add to Cart", value: "+20%" },
@@ -40,6 +43,7 @@ const cases = [
   },
   {
     brand: "Frontend Simplified",
+    slug: "frontend-simplified",
     headline: "Improved their enrolment by 70% with Roasted",
     stats: [
       { label: "CVR Increase", value: "32-55%" },
@@ -51,6 +55,7 @@ const cases = [
   },
   {
     brand: "Soshe Beauty",
+    slug: "soshe-beauty",
     headline: "Nearly 2x'd their conversion rate",
     stats: [
       { label: "Conversion", value: "3 to 5%" },
@@ -62,6 +67,7 @@ const cases = [
   },
   {
     brand: "Wandering Bear",
+    slug: "wandering-bear",
     headline: "Saw a 30% decrease in CPA with our landing page",
     stats: [
       { label: "CVR Increase", value: "34%" },
@@ -73,6 +79,7 @@ const cases = [
   },
   {
     brand: "Braxley Bands",
+    slug: "braxley-bands",
     headline: "Increased conversion by 40% with Roasted",
     stats: [
       { label: "Site-Wide CVR", value: "+40%" },
@@ -84,6 +91,7 @@ const cases = [
   },
   {
     brand: "Roo & You",
+    slug: "roo-and-you",
     headline: "Increased new customers by 25% while doubling ad spend",
     stats: [
       { label: "Increased CVR", value: "40%" },
@@ -144,43 +152,45 @@ export const CaseStudiesPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cases.map((c, i) => (
-            <NeoCard key={i} color={c.color} className="group cursor-pointer hover:shadow-neo-lg transition-all h-full flex flex-col justify-between relative overflow-hidden">
-              <div>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-widest">
-                    {c.tags[0]}
+            <Link key={i} to={`/case-studies/${c.slug}`} className="block h-full">
+              <NeoCard color={c.color} className="group cursor-pointer hover:shadow-neo-lg transition-all h-full flex flex-col justify-between relative overflow-hidden">
+                <div>
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-widest">
+                      {c.tags[0]}
+                    </div>
+                    <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform w-8 h-8 bg-white border-2 border-black rounded-full p-1" />
                   </div>
-                  <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform w-8 h-8 bg-white border-2 border-black rounded-full p-1" />
+
+                  <h3 className="text-3xl font-black uppercase mb-4 leading-none">{c.brand}</h3>
+                  <p className="text-lg font-bold mb-6 leading-tight min-h-[3rem]">{c.headline}</p>
+
+                  <div className="bg-white/80 border-2 border-black p-4 mb-6 shadow-sm">
+                    <div className="grid grid-cols-2 gap-4">
+                      {c.stats.map((stat, idx) => (
+                        <div key={idx} className="text-center border-r last:border-0 border-gray-300">
+                          <div className="font-black text-2xl md:text-3xl text-neo-black">{stat.value}</div>
+                          <div className="font-mono text-xs text-gray-600 uppercase">{stat.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                
-                <h3 className="text-3xl font-black uppercase mb-4 leading-none">{c.brand}</h3>
-                <p className="text-lg font-bold mb-6 leading-tight min-h-[3rem]">{c.headline}</p>
-                
-                <div className="bg-white/80 border-2 border-black p-4 mb-6 shadow-sm">
-                  <div className="grid grid-cols-2 gap-4">
-                    {c.stats.map((stat, idx) => (
-                      <div key={idx} className="text-center border-r last:border-0 border-gray-300">
-                        <div className="font-black text-2xl md:text-3xl text-neo-black">{stat.value}</div>
-                        <div className="font-mono text-xs text-gray-600 uppercase">{stat.label}</div>
-                      </div>
+
+                <div>
+                   <p className="font-mono text-sm text-gray-800 mb-4 border-l-2 border-black pl-3">
+                     "{c.desc}"
+                   </p>
+                   <div className="flex flex-wrap gap-2">
+                    {c.tags.slice(1).map(tag => (
+                      <span key={tag} className="border border-black px-2 py-1 text-[10px] font-bold uppercase bg-white/50">
+                        {tag}
+                      </span>
                     ))}
                   </div>
                 </div>
-              </div>
-
-              <div>
-                 <p className="font-mono text-sm text-gray-800 mb-4 border-l-2 border-black pl-3">
-                   "{c.desc}"
-                 </p>
-                 <div className="flex flex-wrap gap-2">
-                  {c.tags.slice(1).map(tag => (
-                    <span key={tag} className="border border-black px-2 py-1 text-[10px] font-bold uppercase bg-white/50">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </NeoCard>
+              </NeoCard>
+            </Link>
           ))}
         </div>
 

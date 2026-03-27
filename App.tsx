@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { ServicesPage } from './pages/ServicesPage';
 import { ServiceTemplate } from './pages/ServiceTemplate';
 import { CaseStudiesPage } from './pages/CaseStudiesPage';
+import { CaseStudyDetailPage } from './pages/CaseStudyDetailPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { useEffect } from 'react';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/:slug" element={<ServiceTemplate />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/case-studies/:slug" element={<CaseStudyDetailPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
